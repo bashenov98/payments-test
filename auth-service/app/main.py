@@ -4,18 +4,12 @@ from . import models, schemas, auth, database
 from .database import engine
 from .auth import get_current_user
 from .config import settings
+from .dependencies import get_db
+from datetime import timedelta
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-
-# Dependency to get DB session
-def get_db():
-    db = database.SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 @app.post("/register", response_model=schemas.UserOut)
 def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
