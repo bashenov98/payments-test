@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build: ./auth-service/.
+    container_name: auth-service
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+
+  db:
+    image: postgres:13
+    container_name: auth-db
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: auth_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
