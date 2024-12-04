@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8000:80"    
+      - "8000:80"
 
   db:
     image: postgres:13
@@ -25,6 +25,21 @@ services:
     ports:
       - "5432:5432"
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # порт для общения приложений с RabbitMQ
+      - "15672:15672" # порт для доступа к панели управления
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   account-service:
     build: ./account-service
     container_name: account-service
@@ -34,6 +49,30 @@ services:
     depends_on:
       - db
     ports:
-      - "8001:80"  
+      - "8001:80"
+
+  transaction-service:
+    build: ./transaction-service
+    container_name: transaction-service
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - rabbitmq
+    ports:
+      - "8002:80"
+  
+  notification-service:
+    build: ./notification-service
+    container_name: notification-service
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - rabbitmq
+    ports:
+      - "8003:80"
+    
 volumes:
   postgres_data:
