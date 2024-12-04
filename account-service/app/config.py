@@ -1,24 +1,18 @@
-# config.py
-from pydantic import BaseSettings, Field
+# app/config.py
+from pydantic import BaseSettings
 
 class Settings(BaseSettings):
-    # Database settings
-    DB_USERNAME: str = Field(..., env='DB_USERNAME')
-    DB_PASSWORD: str = Field(..., env='DB_PASSWORD')
-    DB_HOST: str = Field(default='localhost', env='DB_HOST')
-    DB_PORT: int = Field(default=5432, env='DB_PORT')
-    DB_NAME: str = Field(..., env='DB_NAME')
+    DB_USERNAME: str
+    DB_PASSWORD: str
+    DB_HOST: str
+    DB_PORT: int
+    DB_NAME: str
 
-    # JWT settings
-    JWT_SECRET_KEY: str = Field(..., env='JWT_SECRET_KEY')
-    JWT_ALGORITHM: str = Field(default='HS256', env='JWT_ALGORITHM')
-
-    # Application settings
-    APP_NAME: str = Field(default='AccountService')
-    DEBUG: bool = Field(default=False, env='DEBUG')
+    SECRET_KEY: str
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
     class Config:
-        env_file = '.env'
-        env_file_encoding = 'utf-8'
+        env_file = ".env"
 
 settings = Settings()

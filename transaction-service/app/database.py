@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from urllib.parse import quote_plus
-from .config import settings
+from config import settings
 
 DATABASE_URL = (
     f"postgresql://{settings.DB_USERNAME}:{quote_plus(settings.DB_PASSWORD)}"

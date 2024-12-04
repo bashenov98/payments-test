@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8000:80"
+      - "8000:80"    
 
   db:
     image: postgres:13
@@ -25,24 +25,15 @@ services:
     ports:
       - "5432:5432"
 
-  account_service:
-    build: .
-    container_name: account_service
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
-    environment:
-      - DB_USERNAME=${DB_USERNAME}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_HOST=db
-      - DB_PORT=${DB_PORT}
-      - DB_NAME=${DB_NAME}
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
-      - JWT_ALGORITHM=${JWT_ALGORITHM}
-      - DEBUG=${DEBUG}
+  account-service:
+    build: ./account-service
+    container_name: account-service
+    restart: always
     env_file:
       - .env
-
+    depends_on:
+      - db
+    ports:
+      - "8001:80"  
 volumes:
   postgres_data:

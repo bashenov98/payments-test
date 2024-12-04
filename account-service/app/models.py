@@ -1,13 +1,31 @@
-from sqlalchemy import Column, String, DECIMAL, ForeignKey, TIMESTAMP
-from sqlalchemy.dialects.postgresql import UUID
-from database import Base
-import uuid
+# app/models.py
+from sqlalchemy import Column, String, Float, ForeignKey, DateTime, Integer, Numeric
+from decimal import Decimal
+from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
+
+from datetime import datetime
+
+from .database import Base  # Импортируйте Base из database.py
+
+class User(Base):
+    __tablename__ = 'users'
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True, nullable=False)
+    email = Column(String(255), unique=True, index=True, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    is_active = Column(Integer, default=1)
+    is_admin = Column(Integer, default=0)
+    accounts = relationship("Account", back_populates="owner")
 
 class Account(Base):
     __tablename__ = 'accounts'
-    account_id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    user_id = Column(UUID(as_uuid=True), ForeignKey('users.user_id'))
-    currency = Column(String(3), nullable=False)
-    balance = Column(DECIMAL, default=0.0)
-    created_at = Column(TIMESTAMP, server_default=func.now())
-    updated_at = Column(TIMESTAMP, onupdate=func.now())
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer,  ForeignKey('users.id'), index=True, nullable=False)
+    currency = Column(String, nullable=False)
+    balance = Column(Numeric(precision=12, scale=2), default=Decimal('0.00'))
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    owner = relationship("User", back_populates="accounts")
