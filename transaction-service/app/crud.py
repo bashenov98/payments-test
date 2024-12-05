@@ -1,11 +1,12 @@
+from decimal import Decimal
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from app import models
 
 def transfer_funds(db: Session, from_account_id: int, to_account_id: int, amount: float):
     try:
-        from_account = db.query(models.Account).filter(models.Account.id == from_account_id).first()
-        to_account = db.query(models.Account).filter(models.Account.id == to_account_id).first()
+        from_account = db.query(models.Account).filter(models.Account.user_id == from_account_id).first()
+        to_account = db.query(models.Account).filter(models.Account.user_id == to_account_id).first()
 
         if not from_account or not to_account:
             raise ValueError("One or both accounts not found")
@@ -13,8 +14,8 @@ def transfer_funds(db: Session, from_account_id: int, to_account_id: int, amount
         if from_account.balance < amount:
             raise ValueError("Insufficient funds")
 
-        from_account.balance -= amount
-        to_account.balance += amount
+        from_account.balance -= Decimal(str(amount))
+        to_account.balance += Decimal(str(amount))
 
         # Логируем транзакцию
         transaction = models.Transaction(

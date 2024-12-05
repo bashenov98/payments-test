@@ -5,6 +5,7 @@ from app.database import engine, get_db
 import pika
 import json
 import time
+import requests
 
 RABBITMQ_HOST = "rabbitmq"
 RABBITMQ_QUEUE = "notifications"
@@ -62,13 +63,13 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
             amount=request.amount
         )
         message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
-        send_notification_to_queue(to_email="bashenov98@gmail.com", message=message_text)
+        send_notification_to_queue(to_email="azamat.han2007@gmail.com", message=message_text)
 
         return transaction
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=500, detail="An error occurred during the transaction")
+        raise HTTPException(status_code=500, detail="An error occurred during the transaction: " + str(e))
 
 # Get all transactions
 @app.get("/transactions", response_model=list[schemas.TransactionResponse])
@@ -86,3 +87,42 @@ def read_transactions_by_account(account_id: int, db: Session = Depends(get_db))
         return transactions
     except Exception as e:
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions")
+    
+    
+@app.get("/rates")
+def get_currency_rates():
+
+    url = "https://www.bcc.kz/personal/get_app_courses/"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
+
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()  
+        return extract_sell_rates( json.dumps(response.json(), indent=4) )
+    
+    except requests.exceptions.Timeout:
+        print("Ошибка: Превышено время ожидания")
+    except requests.exceptions.RequestException as e:
+        print(f"Ошибка запроса: {e}")
+    except ValueError:
+        print("Ошибка: Ответ не в формате JSON")
+    
+    return None  
+
+def extract_sell_rates(json_string):
+    try:
+        json_data = json.loads(json_string)
+        
+        sell_rates = {
+            "usd": json_data.get("usd_sell"),
+            "eur": json_data.get("eur_sell"),
+            "rub": json_data.get("rub_sell"),
+            "gbp": json_data.get("gbp_sell")
+        }
+        
+        return sell_rates
+    except json.JSONDecodeError:
+        print("Ошибка: Невалидный JSON.")
+        return None
