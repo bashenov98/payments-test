@@ -1,6 +1,8 @@
 from decimal import Decimal
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy import func
+from sqlalchemy.sql import case
 from app import models
 
 def transfer_funds(db: Session, from_account_id: int, to_account_id: int, amount: float):
@@ -48,3 +50,32 @@ def get_transactions_by_account(db: Session, account_id: int):
         (models.Transaction.from_account_id == account_id) | 
         (models.Transaction.to_account_id == account_id)
     ).all()
+
+
+
+def get_account_balance_with_drafts(db, account_id: int):
+    """
+    Calculate saldo (final balance) and draft (pending transactions) for the given account.
+    """
+    # Calculate saldo
+    saldo = db.query(
+        func.sum(
+            case(
+                (models.Transaction.from_account_id == account_id, -models.Transaction.amount),
+                (models.Transaction.to_account_id == account_id, models.Transaction.amount),
+            )
+        )
+    ).filter(models.Transaction.status != "pending").scalar() or 0
+
+    # Calculate draft
+    draft = db.query(
+        func.sum(models.Transaction.amount)
+    ).filter(
+        models.Transaction.from_account_id == account_id,
+        models.Transaction.status == "pending"
+    ).scalar() or 0
+
+    return {
+        "saldo": saldo,
+        "draft": draft
+    }

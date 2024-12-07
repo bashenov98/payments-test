@@ -143,3 +143,14 @@ def extract_sell_rates(json_string):
     except json.JSONDecodeError:
         print("Ошибка: Невалидный JSON.")
         return None
+    
+    
+@app.get("/saldodraft/{account_id}")
+def read_transactions_by_account(account_id: int, db: Session = Depends(get_db)):
+    try:    
+        transactions = crud.get_account_balance_with_drafts(db, account_id)
+        return transactions
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        raise HTTPException(status_code=500, detail="An error occurred while fetching transactions:  {e}")
+    
