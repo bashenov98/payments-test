@@ -8,7 +8,6 @@ import time
 import requests
 
 RABBITMQ_HOST = "rabbitmq"
-RABBITMQ_QUEUE = "notifications"
 
 # Create tables
 models.Base.metadata.create_all(bind=engine)
@@ -32,7 +31,7 @@ def send_notification_to_queue(to_email, message):
     """Publish JSON object to RabbitMQ"""
     connection = get_connection()
     channel = connection.channel()
-    channel.queue_declare(queue=RABBITMQ_QUEUE, durable=True)
+    channel.queue_declare(queue="notifications", durable=True)
 
     notification = {
         "to_email": to_email,
@@ -41,13 +40,31 @@ def send_notification_to_queue(to_email, message):
 
     channel.basic_publish(
         exchange='',
-        routing_key=RABBITMQ_QUEUE,
+        routing_key="notifications",
         body=json.dumps(notification),
         properties=pika.BasicProperties(
             delivery_mode=2  # Makes message persistent
         )
     )
     print(f"Notification sent to queue: {notification}")
+    connection.close()
+
+    
+
+def send_transaction_to_queue(transaction):
+    connection = get_connection()
+    channel = connection.channel()
+    channel.queue_declare(queue="transaction", durable=True)
+
+    channel.basic_publish(
+        exchange='',
+        routing_key="transaction",
+        body=json.dumps(transaction, indent=5),
+        properties=pika.BasicProperties(
+            delivery_mode=2  # 
+        )
+    )
+    print(f"Notification sent to queue: {transaction}")
     connection.close()
 
 def create_transaction_message(from_account_id, to_account_id, amount):
@@ -64,7 +81,7 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
         )
         message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
         send_notification_to_queue(to_email="azamat.han2007@gmail.com", message=message_text)
-
+        send_transaction_to_queue(transaction.to_dict())
         return transaction
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
