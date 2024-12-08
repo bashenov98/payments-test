@@ -9,8 +9,11 @@ import time
 import requests
 import threading
 from redis import Redis
+# from starlette_exporter import handle_metrics, PrometheusMiddleware
 from .middleware import LoggingMiddleware
 from .logger import get_logger
+from prometheus_client import Counter, Histogram, generate_latest
+from starlette.responses import Response
 
 RABBITMQ_HOST = "rabbitmq"
 
@@ -27,6 +30,23 @@ app = FastAPI()
 
 app.add_middleware(LoggingMiddleware)
 log.info("Application initialized")
+
+REQUEST_COUNT = Counter('request_count', 'Number of requests', ['method', 'endpoint'])
+REQUEST_LATENCY = Histogram('request_latency_seconds', 'Request latency', ['endpoint'])
+
+@app.middleware("http")
+async def add_prometheus_middleware(request, call_next):
+    endpoint = request.url.path
+    method = request.method
+    REQUEST_COUNT.labels(method=method, endpoint=endpoint).inc()
+
+    with REQUEST_LATENCY.labels(endpoint=endpoint).time():
+        response = await call_next(request)
+    return response
+
+@app.get("/metrics")
+def metrics():
+    return Response(generate_latest(), media_type="text/plain")
 
 def get_connection():
     """Establish connection to RabbitMQ"""

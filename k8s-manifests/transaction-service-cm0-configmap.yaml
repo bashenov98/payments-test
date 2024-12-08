@@ -1,0 +1,63 @@
+apiVersion: v1
+data:
+  app.log: |
+    2024-12-08 18:59:59.078 | INFO     | app.main:<module>:29 - Application initialized
+    2024-12-08 18:59:59.095 | INFO     | app.main:startup_event:150 - Starting up application
+    2024-12-08 18:59:59.249 | INFO     | app.main:fetch_currency_rates:165 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 19:00:26.462 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 19:00:26.466 | INFO     | app.main:get_currency_rates:188 - Returning cached currency rates
+    2024-12-08 19:00:26.468 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.00s
+    2024-12-08 19:14:38.204 | INFO     | app.main:<module>:29 - Application initialized
+    2024-12-08 19:14:38.209 | INFO     | app.main:startup_event:150 - Starting up application
+    2024-12-08 19:14:38.371 | INFO     | app.main:fetch_currency_rates:165 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 19:19:16.502 | INFO     | app.main:<module>:31 - Application initialized
+    2024-12-08 19:19:16.518 | INFO     | app.main:startup_event:169 - Starting up application
+    2024-12-08 19:19:18.689 | INFO     | app.main:fetch_currency_rates:184 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 19:29:51.114 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 19:29:51.149 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 19:29:51.152 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.02s
+    2024-12-08 19:29:57.139 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 19:29:57.147 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 19:29:57.148 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.00s
+    2024-12-08 19:30:59.289 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/metrics
+    2024-12-08 19:30:59.309 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/metrics with status 200 in 0.02s
+    2024-12-08 19:37:51.591 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 19:37:51.596 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 19:37:51.600 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.01s
+    2024-12-08 19:59:43.865 | INFO     | app.main:<module>:31 - Application initialized
+    2024-12-08 19:59:43.875 | INFO     | app.main:startup_event:169 - Starting up application
+    2024-12-08 19:59:44.100 | INFO     | app.main:fetch_currency_rates:184 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 20:02:06.731 | INFO     | app.main:<module>:31 - Application initialized
+    2024-12-08 20:02:06.744 | INFO     | app.main:startup_event:169 - Starting up application
+    2024-12-08 20:02:06.914 | INFO     | app.main:fetch_currency_rates:184 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 20:03:07.662 | INFO     | app.main:<module>:31 - Application initialized
+    2024-12-08 20:03:07.671 | INFO     | app.main:startup_event:169 - Starting up application
+    2024-12-08 20:03:07.860 | INFO     | app.main:fetch_currency_rates:184 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 20:03:55.699 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 20:03:55.705 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 20:03:55.707 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.01s
+    2024-12-08 20:07:34.874 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 20:07:34.878 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 20:07:34.879 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.00s
+    2024-12-08 20:07:52.039 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 20:07:52.041 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 20:07:52.042 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.00s
+    2024-12-08 20:08:39.589 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/metrics
+    2024-12-08 20:08:39.596 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/metrics with status 200 in 0.01s
+    2024-12-08 20:11:41.980 | INFO     | app.main:<module>:31 - Application initialized
+    2024-12-08 20:11:41.986 | INFO     | app.main:startup_event:169 - Starting up application
+    2024-12-08 20:11:42.256 | INFO     | app.main:fetch_currency_rates:184 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 20:12:27.236 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 20:12:27.241 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 20:12:27.242 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.00s
+    2024-12-08 20:19:08.018 | INFO     | app.main:<module>:31 - Application initialized
+    2024-12-08 20:19:08.026 | INFO     | app.main:startup_event:169 - Starting up application
+    2024-12-08 20:19:08.289 | INFO     | app.main:fetch_currency_rates:184 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+    2024-12-08 20:19:22.270 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/rates
+    2024-12-08 20:19:22.276 | INFO     | app.main:get_currency_rates:207 - Returning cached currency rates
+    2024-12-08 20:19:22.277 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/rates with status 200 in 0.01s
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: transaction-service
+  name: transaction-service-cm0

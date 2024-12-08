@@ -7,3 +7,5 @@ pydantic
 alembic
 mailtrap
 pika
+starlette
+prometheus-client

@@ -10,3 +10,5 @@ pydantic-settings
 email-validator
 bcrypt
 passlib
+starlette
+prometheus-client
