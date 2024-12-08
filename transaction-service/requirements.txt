@@ -8,3 +8,5 @@ pika
 requests
 python-jose
 redis
+loguru
+starlette

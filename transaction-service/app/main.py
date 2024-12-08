@@ -9,6 +9,8 @@ import time
 import requests
 import threading
 from redis import Redis
+from .middleware import LoggingMiddleware
+from .logger import get_logger
 
 RABBITMQ_HOST = "rabbitmq"
 
@@ -19,7 +21,12 @@ FETCH_INTERVAL = 3600
 # Create tables
 models.Base.metadata.create_all(bind=engine)
 
+log = get_logger("transaction-service")
+
 app = FastAPI()
+
+app.add_middleware(LoggingMiddleware)
+log.info("Application initialized")
 
 def get_connection():
     """Establish connection to RabbitMQ"""
@@ -27,52 +34,53 @@ def get_connection():
     parameters = pika.ConnectionParameters('rabbitmq', 5672, '/', credentials)
     for attempt in range(5):
         try:
+            log.info(f"Attempting to connect to RabbitMQ (attempt {attempt + 1})")
             return pika.BlockingConnection(parameters)
         except pika.exceptions.AMQPConnectionError:
-            print(f"Connection attempt {attempt + 1} failed. Retrying in 5 seconds...")
+            log.warning(f"RabbitMQ connection attempt {attempt + 1} failed. Retrying...")
             time.sleep(5)
+    log.error("Unable to connect to RabbitMQ after 5 attempts")
     raise Exception("Unable to connect to RabbitMQ after 5 attempts")
 
 
 def send_notification_to_queue(to_email, message):
-    """Publish JSON object to RabbitMQ"""
-    connection = get_connection()
-    channel = connection.channel()
-    channel.queue_declare(queue="notifications", durable=True)
+    try:
+        connection = get_connection()
+        channel = connection.channel()
+        channel.queue_declare(queue="notifications", durable=True)
 
-    notification = {
-        "to_email": to_email,
-        "message": message
-    }
+        notification = {"to_email": to_email, "message": message}
 
-    channel.basic_publish(
-        exchange='',
-        routing_key="notifications",
-        body=json.dumps(notification),
-        properties=pika.BasicProperties(
-            delivery_mode=2  # Makes message persistent
+        channel.basic_publish(
+            exchange='',
+            routing_key="notifications",
+            body=json.dumps(notification),
+            properties=pika.BasicProperties(delivery_mode=2)
         )
-    )
-    print(f"Notification sent to queue: {notification}")
-    connection.close()
+        log.info(f"Notification sent to queue: {notification}")
+        connection.close()
+    except Exception as e:
+        log.error(f"Error sending notification to RabbitMQ: {e}")
+
 
     
 
 def send_transaction_to_queue(transaction):
-    connection = get_connection()
-    channel = connection.channel()
-    channel.queue_declare(queue="transaction", durable=True)
+    try:
+        connection = get_connection()
+        channel = connection.channel()
+        channel.queue_declare(queue="transaction", durable=True)
 
-    channel.basic_publish(
-        exchange='',
-        routing_key="transaction",
-        body=json.dumps(transaction, indent=5),
-        properties=pika.BasicProperties(
-            delivery_mode=2  # 
+        channel.basic_publish(
+            exchange='',
+            routing_key="transaction",
+            body=json.dumps(transaction, indent=5),
+            properties=pika.BasicProperties(delivery_mode=2)
         )
-    )
-    print(f"Notification sent to queue: {transaction}")
-    connection.close()
+        log.info(f"Transaction sent to queue: {transaction}")
+        connection.close()
+    except Exception as e:
+        log.error(f"Error sending transaction to RabbitMQ: {e}")
 
 def create_transaction_message(from_account_id, to_account_id, amount):
     return f"New transaction initiated: From Account {from_account_id} to Account {to_account_id} with Amount {amount:.2f}"
@@ -80,6 +88,7 @@ def create_transaction_message(from_account_id, to_account_id, amount):
 @app.post("/transactions", response_model=schemas.TransactionResponse)
 def create_transaction(request: schemas.TransactionRequest, db: Session = Depends(get_db)):
     try:
+        log.info(f"Creating transaction: {request}")
         transaction = crud.transfer_funds(
             db, 
             from_account_id=request.from_account_id, 
@@ -89,27 +98,34 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
         message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
         send_notification_to_queue(to_email="azamat.han2007@gmail.com", message=message_text)
         send_transaction_to_queue(transaction.to_dict())
+        log.info(f"Transaction created successfully: {transaction}")
         return transaction
     except ValueError as e:
+        log.error(f"Transaction failed with ValueError: {e}")
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+        log.error(f"Unexpected error during transaction creation: {e}")
         raise HTTPException(status_code=500, detail="An error occurred during the transaction: " + str(e))
 
 # Get all transactions
 @app.get("/transactions", response_model=list[schemas.TransactionResponse])
 def get_all_transactions(db: Session = Depends(get_db)):
     try:
+        log.info("Fetching all transactions")
         transactions = db.query(models.Transaction).all()
         return transactions
     except Exception as e:
+        log.error(f"Error fetching transactions: {e}")
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions")
 
 @app.get("/transactions/{account_id}")
 def read_transactions_by_account(account_id: int, db: Session = Depends(get_db)):
     try:    
+        log.info(f"Fetching transactions for account: {account_id}")
         transactions = crud.get_transactions_by_account(db, account_id)
         return transactions
     except Exception as e:
+        log.error(f"Error fetching transactions for account {account_id}: {e}")
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions")
     
 
@@ -131,9 +147,7 @@ def extract_sell_rates(json_string):
 
 @app.on_event("startup")
 async def startup_event():
-    """
-    Initialize the application by starting the currency rate fetcher in a thread.
-    """
+    log.info("Starting up application")
     thread = threading.Thread(target=schedule_rates_fetch, daemon=True)
     thread.start()
 
@@ -148,13 +162,13 @@ def fetch_currency_rates():
         response.raise_for_status()  
         rates = extract_sell_rates( json.dumps(response.json(), indent=4) )
         redis_client.set(CURRENCY_RATES_KEY, json.dumps(rates))
-    
+        log.info(f"Currency rates updated: {rates}")
     except requests.exceptions.Timeout:
-        print("Ошибка: Превышено время ожидания")
+        log.warning("Currency rate fetch timeout")
     except requests.exceptions.RequestException as e:
-        print(f"Ошибка запроса: {e}")
+        log.error(f"Currency rate fetch error: {e}")
     except ValueError:
-        print("Ошибка: Ответ не в формате JSON")
+        log.error("Currency rate response not in JSON format")
 
 def schedule_rates_fetch():
     """
@@ -171,7 +185,9 @@ def get_currency_rates():
     """
     rates = redis_client.get(CURRENCY_RATES_KEY)
     if rates:
+        log.info("Returning cached currency rates")
         return json.loads(rates)
+    log.warning("Currency rates not available")
     return {"error": "Currency rates not available."}
 
 @app.get("/saldodraft/{account_id}")
