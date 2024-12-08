@@ -84,11 +84,7 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
             raise HTTPException(status_code=404, detail="Account not found")
         message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
         send_notification_to_queue(to_email="azamat.han2007@gmail.com", message=message_text)
-<<<<<<< Updated upstream
         send_transaction_to_queue(transaction.to_dict())
-=======
-    
->>>>>>> Stashed changes
         return transaction
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
