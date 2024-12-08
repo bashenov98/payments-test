@@ -73,6 +73,13 @@ services:
       - rabbitmq
     ports:
       - "8003:80"
+
+  redis:
+    image: redis:6-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
     
 volumes:
   postgres_data:

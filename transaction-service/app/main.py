@@ -7,8 +7,14 @@ import pika
 import json
 import time
 import requests
+import threading
+from redis import Redis
 
 RABBITMQ_HOST = "rabbitmq"
+
+redis_client = Redis(host="redis", port=6379, decode_responses=True)
+CURRENCY_RATES_KEY = "currency_rates"
+FETCH_INTERVAL = 3600
 
 # Create tables
 models.Base.metadata.create_all(bind=engine)
@@ -72,7 +78,7 @@ def create_transaction_message(from_account_id, to_account_id, amount):
     return f"New transaction initiated: From Account {from_account_id} to Account {to_account_id} with Amount {amount:.2f}"
 
 @app.post("/transactions", response_model=schemas.TransactionResponse)
-def create_transaction(request: schemas.TransactionRequest, db: Session = Depends(get_db), current_account: models.Account = Depends(get_current_account)):
+def create_transaction(request: schemas.TransactionRequest, db: Session = Depends(get_db)):
     try:
         transaction = crud.transfer_funds(
             db, 
@@ -80,8 +86,6 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
             to_account_id=request.to_account_id, 
             amount=request.amount
         )
-        if transaction is None or transaction.from_account_id != current_account.id:
-            raise HTTPException(status_code=404, detail="Account not found")
         message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
         send_notification_to_queue(to_email="azamat.han2007@gmail.com", message=message_text)
         send_transaction_to_queue(transaction.to_dict())
@@ -93,53 +97,21 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
 
 # Get all transactions
 @app.get("/transactions", response_model=list[schemas.TransactionResponse])
-def get_all_transactions(db: Session = Depends(get_db), current_account: models.Account = Depends(get_current_account)):
+def get_all_transactions(db: Session = Depends(get_db)):
     try:
         transactions = db.query(models.Transaction).all()
-
-        if transactions is None or transactions.from_account_id != current_account.id:
-            raise HTTPException(status_code=404, detail="Account not found")
         return transactions
     except Exception as e:
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions")
 
 @app.get("/transactions/{account_id}")
-def read_transactions_by_account(account_id: int, db: Session = Depends(get_db), current_account: models.Account = Depends(get_current_account)):
+def read_transactions_by_account(account_id: int, db: Session = Depends(get_db)):
     try:    
         transactions = crud.get_transactions_by_account(db, account_id)
-
-        if transactions is None or transactions.from_account_id != current_account.id:
-            raise HTTPException(status_code=404, detail="Account not found")
-        
         return transactions
     except Exception as e:
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions")
     
-    
-@app.get("/rates")
-def get_currency_rates():
-
-    url = "https://www.bcc.kz/personal/get_app_courses/"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-    }
-
-    try:
-        response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()  
-        return extract_sell_rates( json.dumps(response.json(), indent=4) )
-    
-    except requests.exceptions.Timeout:
-        print("Ошибка: Превышено время ожидания")
-    except requests.exceptions.RequestException as e:
-        print(f"Ошибка запроса: {e}")
-    except ValueError:
-        print("Ошибка: Ответ не в формате JSON")
-
-    if transaction is None or from_account_id.user_id != current_user.id:
-        raise HTTPException(status_code=404, detail="Account not found")
-        
-    return None  
 
 def extract_sell_rates(json_string):
     try:
@@ -156,8 +128,52 @@ def extract_sell_rates(json_string):
     except json.JSONDecodeError:
         print("Ошибка: Невалидный JSON.")
         return None
+
+@app.on_event("startup")
+async def startup_event():
+    """
+    Initialize the application by starting the currency rate fetcher in a thread.
+    """
+    thread = threading.Thread(target=schedule_rates_fetch, daemon=True)
+    thread.start()
+
+def fetch_currency_rates():
+    url = "https://www.bcc.kz/personal/get_app_courses/"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
+
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()  
+        rates = extract_sell_rates( json.dumps(response.json(), indent=4) )
+        redis_client.set(CURRENCY_RATES_KEY, json.dumps(rates))
     
-    
+    except requests.exceptions.Timeout:
+        print("Ошибка: Превышено время ожидания")
+    except requests.exceptions.RequestException as e:
+        print(f"Ошибка запроса: {e}")
+    except ValueError:
+        print("Ошибка: Ответ не в формате JSON")
+
+def schedule_rates_fetch():
+    """
+    Periodically fetch currency rates every hour.
+    """
+    while True:
+        fetch_currency_rates()
+        time.sleep(FETCH_INTERVAL)
+
+@app.get("/rates")
+def get_currency_rates():
+    """
+    Fetches the latest currency rates from Redis and returns them.
+    """
+    rates = redis_client.get(CURRENCY_RATES_KEY)
+    if rates:
+        return json.loads(rates)
+    return {"error": "Currency rates not available."}
+
 @app.get("/saldodraft/{account_id}")
 def read_transactions_by_account(account_id: int, db: Session = Depends(get_db)):
     try:    
