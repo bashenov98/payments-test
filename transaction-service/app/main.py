@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
 from app import models, schemas, crud
 from app.database import engine, get_db
+from .dependencies import  get_current_account
 import pika
 import json
 import time
@@ -71,7 +72,7 @@ def create_transaction_message(from_account_id, to_account_id, amount):
     return f"New transaction initiated: From Account {from_account_id} to Account {to_account_id} with Amount {amount:.2f}"
 
 @app.post("/transactions", response_model=schemas.TransactionResponse)
-def create_transaction(request: schemas.TransactionRequest, db: Session = Depends(get_db)):
+def create_transaction(request: schemas.TransactionRequest, db: Session = Depends(get_db), current_account: models.Account = Depends(get_current_account)):
     try:
         transaction = crud.transfer_funds(
             db, 
@@ -79,9 +80,15 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
             to_account_id=request.to_account_id, 
             amount=request.amount
         )
+        if transaction is None or transaction.from_account_id != current_account.id:
+            raise HTTPException(status_code=404, detail="Account not found")
         message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
         send_notification_to_queue(to_email="azamat.han2007@gmail.com", message=message_text)
+<<<<<<< Updated upstream
         send_transaction_to_queue(transaction.to_dict())
+=======
+    
+>>>>>>> Stashed changes
         return transaction
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -90,17 +97,24 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
 
 # Get all transactions
 @app.get("/transactions", response_model=list[schemas.TransactionResponse])
-def get_all_transactions(db: Session = Depends(get_db)):
+def get_all_transactions(db: Session = Depends(get_db), current_account: models.Account = Depends(get_current_account)):
     try:
         transactions = db.query(models.Transaction).all()
+
+        if transactions is None or transactions.from_account_id != current_account.id:
+            raise HTTPException(status_code=404, detail="Account not found")
         return transactions
     except Exception as e:
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions")
 
 @app.get("/transactions/{account_id}")
-def read_transactions_by_account(account_id: int, db: Session = Depends(get_db)):
+def read_transactions_by_account(account_id: int, db: Session = Depends(get_db), current_account: models.Account = Depends(get_current_account)):
     try:    
         transactions = crud.get_transactions_by_account(db, account_id)
+
+        if transactions is None or transactions.from_account_id != current_account.id:
+            raise HTTPException(status_code=404, detail="Account not found")
+        
         return transactions
     except Exception as e:
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions")
@@ -125,7 +139,10 @@ def get_currency_rates():
         print(f"Ошибка запроса: {e}")
     except ValueError:
         print("Ошибка: Ответ не в формате JSON")
-    
+
+    if transaction is None or from_account_id.user_id != current_user.id:
+        raise HTTPException(status_code=404, detail="Account not found")
+        
     return None  
 
 def extract_sell_rates(json_string):

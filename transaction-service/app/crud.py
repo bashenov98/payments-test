@@ -7,8 +7,8 @@ from app import models
 
 def transfer_funds(db: Session, from_account_id: int, to_account_id: int, amount: float):
     try:
-        from_account = db.query(models.Account).filter(models.Account.user_id == from_account_id).first()
-        to_account = db.query(models.Account).filter(models.Account.user_id == to_account_id).first()
+        from_account = db.query(models.Account).filter(models.Account.id == from_account_id).first()
+        to_account = db.query(models.Account).filter(models.Account.id == to_account_id).first()
 
         if not from_account or not to_account:
             raise ValueError("One or both accounts not found")
@@ -50,6 +50,14 @@ def get_transactions_by_account(db: Session, account_id: int):
         (models.Transaction.from_account_id == account_id) | 
         (models.Transaction.to_account_id == account_id)
     ).all()
+
+
+def get_account_by_user_id(db: Session, user_id: int, account_id: int):
+    return db.query(models.Account).filter(models.Account.user_id == user_id, models.Account.id == account_id).first()
+
+def get_user_by_username(db: Session, username: str):
+    return db.query(models.User).filter(models.User.username == username).first()
+
 
 
 
