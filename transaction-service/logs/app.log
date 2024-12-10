@@ -151,3 +151,98 @@
 2024-12-10 07:04:35.512 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
 2024-12-10 07:05:48.644 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
 2024-12-10 07:05:48.659 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 200 in 0.01s
+2024-12-10 07:31:49.834 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:31:49.871 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 07:31:50.252 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:00:33.888 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:00:33.924 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 08:00:34.159 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:08:59.418 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:08:59.435 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 08:08:59.925 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:20:10.981 | ERROR    | app.main:fetch_currency_rates:238 - Currency rate fetch error: HTTPSConnectionPool(host='www.bcc.kz', port=443): Max retries exceeded with url: /personal/get_app_courses/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f3bf4cade50>: Failed to resolve 'www.bcc.kz' ([Errno -2] Name or service not known)"))
+2024-12-10 10:05:36.137 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 10:05:36.187 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 10:05:37.021 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 10:14:58.634 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 10:14:58.708 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 10:14:59.220 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 10:27:41.194 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 10:27:41.204 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 10:27:41.379 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 10:30:37.478 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 10:30:37.488 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 10:30:37.855 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 10:30:40.486 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:30:40.488 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:30:55.481 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:30:55.489 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:31:10.483 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:31:10.489 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:31:25.482 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:31:25.488 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:31:36.937 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 10:31:36.948 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 10:31:37.422 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 10:31:40.488 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:31:40.490 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:31:55.484 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:31:55.495 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:32:10.498 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:32:10.502 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:32:25.498 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:32:25.506 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:32:40.498 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:32:40.502 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:32:55.505 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:32:55.510 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:33:10.518 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:33:10.554 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:33:25.500 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:33:25.506 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:33:52.782 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:33:52.799 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:33:31.886 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:33:31.896 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:33:46.859 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:33:46.865 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:34:01.935 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:34:01.942 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:34:16.936 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:34:16.943 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:34:25.643 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:34:25.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.09s
+2024-12-10 10:34:40.649 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:34:40.668 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:34:55.740 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:34:55.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:35:10.767 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:35:10.801 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:35:25.729 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:35:25.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:35:40.728 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:35:40.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:35:55.727 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:35:55.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:36:10.725 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:36:10.730 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:36:25.728 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:36:25.734 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:36:40.727 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:36:40.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:36:55.729 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:36:55.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:37:10.724 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:37:10.727 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:37:25.725 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:37:25.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
+2024-12-10 10:38:44.605 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:38:44.622 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:37:46.967 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:37:46.973 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:38:01.965 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:38:01.971 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-10 10:38:13.861 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:38:13.907 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.03s
+2024-12-10 10:38:16.801 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
+2024-12-10 10:38:16.805 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s

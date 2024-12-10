@@ -44,7 +44,7 @@ def get_connection():
     """Establish connection to RabbitMQ"""
     credentials = pika.PlainCredentials('user', 'password')
     parameters = pika.ConnectionParameters('rabbitmq', 5672, '/', credentials)
-    for attempt in range(5):
+    for attempt in range(10):
         try:
             return pika.BlockingConnection(parameters)
         except pika.exceptions.AMQPConnectionError:
