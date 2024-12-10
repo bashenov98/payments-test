@@ -103,7 +103,7 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     restart: always
-    
+
 volumes:
   postgres_data:
   grafana-data:

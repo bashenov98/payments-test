@@ -16,7 +16,7 @@ scrape_configs:
 
   - job_name: 'transaction-service'
     static_configs:
-      - targets: ['transaction-service:8002']
+      - targets: ['localhost:8002']
     metrics_path: /metrics
     scheme: http
 

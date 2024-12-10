@@ -11,6 +11,6 @@ spec:
   ports:
     - name: "8002"
       port: 8002
-      targetPort: 80
+      targetPort: 8002
   selector:
     io.kompose.service: transaction-service
