@@ -47,7 +47,9 @@ def delete_account(db: Session, account_id: int):
     return True
 
 def get_user_by_username(db: Session, username: str):
-    return db.query(models.User).filter(models.User.username == username).first()
+    user = db.query(models.User).filter(models.User.username == username).first()
+    print(f"Fetched user for username '{username}': {user}")
+    return user
 
 def process_transaction(db: Session, body):
     """

@@ -6,6 +6,7 @@ python-jose
 pydantic
 pydantic_settings
 alembic
+pika
 starlette
 prometheus-client
-pika
+redis

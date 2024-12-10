@@ -7,6 +7,9 @@ from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer
 from .dependencies import get_db
+from sqlalchemy.orm import Session
+from app.models import Role, Permission, User
+from .schemas import RoleCreate, PermissionCreate, UserCreate
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
@@ -14,11 +17,13 @@ SECRET_KEY = settings.SECRET_KEY
 ALGORITHM = settings.ALGORITHM
 ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
 
-def create_access_token(data: dict, expires_delta: timedelta = None):
+def create_access_token(data: dict, expires_delta: timedelta):
     to_encode = data.copy()
-    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=15))
+    expire = datetime.utcnow() + expires_delta
     to_encode.update({"exp": expire})
-    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
 
 def verify_password(plain_password, hashed_password):
     from passlib.context import CryptContext
@@ -30,7 +35,7 @@ def get_password_hash(password):
     pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
     return pwd_context.hash(password)
 
-def get_user(db, username: str):
+def get_user(db, username: int):
     return db.query(models.User).filter(models.User.username == username).first()
 
 def authenticate_user(db, username: str, password: str):
@@ -47,7 +52,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme), db: Session = De
     )
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
+        username: int = payload.get("sub")
         if username is None:
             raise credentials_exception
         token_data = schemas.TokenData(username=username)
@@ -57,3 +62,26 @@ async def get_current_user(token: str = Depends(oauth2_scheme), db: Session = De
     if user is None:
         raise credentials_exception
     return user
+
+def create_role(db: Session, role: RoleCreate):
+    db_role = Role(name=role.name, description=role.description)
+    db.add(db_role)
+    db.commit()
+    db.refresh(db_role)
+    return db_role
+
+def create_permission(db: Session, permission: PermissionCreate):
+    db_permission = Permission(name=permission.name, description=permission.description)
+    db.add(db_permission)
+    db.commit()
+    db.refresh(db_permission)
+    return db_permission
+
+def create_user(db: Session, user: UserCreate, hashed_password: str):
+    db_user = User(
+        username=user.username, hashed_password=hashed_password, role_id=user.role_id
+    )
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user

@@ -5,7 +5,7 @@ from typing import List
 from decimal import Decimal
 import json
 from .. import schemas, crud, models
-from ..dependencies import get_db, get_current_user, get_current_admin
+from ..dependencies import get_db, get_current_user, is_admin
 
 router = APIRouter(
     prefix="/accounts",
@@ -17,9 +17,10 @@ router = APIRouter(
 def create_account(
     account: schemas.AccountCreate,
     db: Session = Depends(get_db),
-    current_user: models.User = Depends(get_current_user)
+    role_id: int = Depends(is_admin),
+    current_user: int = Depends(get_current_user)
 ):
-    return crud.create_account(db=db, account=account, user_id=current_user.id)
+    return crud.create_account(db=db, account=account, user_id=current_user)
 
 @router.get("/{account_id}", response_model=schemas.AccountOut)
 def read_account(account_id: int, db: Session = Depends(get_db), current_user: models.User = Depends(get_current_user)):

@@ -56,1062 +56,245 @@
 2024-12-08 21:05:54.725 | INFO     | app.main:<module>:32 - Application initialized
 2024-12-08 21:05:54.833 | INFO     | app.main:startup_event:170 - Starting up application
 2024-12-08 21:05:58.789 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
-2024-12-10 06:04:54.176 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 06:04:54.182 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 06:04:54.771 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 06:05:31.398 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
-2024-12-10 06:05:31.400 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
-2024-12-10 06:05:31.526 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
-2024-12-10 06:05:31.543 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.02s
-2024-12-10 06:06:24.590 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 06:06:24.596 | INFO     | app.main:create_replenishment:134 - Creating replenishment: id=0 from_='bank' to_account_id=1 amount=100.0 currency='string' rate='string' status='string' message='string' start_date=datetime.datetime(2024, 12, 10, 6, 5, 39, 465000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 5, 39, 465000, tzinfo=TzInfo(UTC))
-2024-12-10 06:06:24.597 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: 'ReplenishmentResponse' object has no attribute 'from_account_id'
-2024-12-10 06:06:24.599 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.01s
-2024-12-10 06:11:11.930 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 06:11:11.936 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 06:11:12.206 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 06:11:18.668 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
-2024-12-10 06:11:18.669 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
-2024-12-10 06:11:23.580 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
-2024-12-10 06:11:23.592 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.01s
-2024-12-10 06:12:53.217 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 06:12:53.222 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 06:12:53.894 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 06:12:56.474 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
-2024-12-10 06:12:56.475 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
-2024-12-10 06:12:56.857 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
-2024-12-10 06:12:56.870 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.01s
-2024-12-10 06:14:20.161 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 06:14:20.167 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
-2024-12-10 06:14:20.169 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 06:14:20.182 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: 'ReplenishmentRequest' object has no attribute 'from_account_id'
-2024-12-10 06:14:20.183 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.02s
-2024-12-10 06:16:19.468 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 06:16:19.476 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 06:16:19.704 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 06:16:36.386 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 06:16:36.391 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
-2024-12-10 06:16:36.392 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 06:16:36.413 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
-2024-12-10 06:16:36.414 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.03s
-2024-12-10 06:18:20.495 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 06:18:20.502 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 06:18:20.837 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 06:18:22.137 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 06:18:22.143 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
-2024-12-10 06:18:22.144 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 06:18:22.156 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
-2024-12-10 06:18:22.157 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.02s
-2024-12-10 06:18:25.912 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 06:18:25.914 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
-2024-12-10 06:18:25.915 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 06:18:25.921 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
-2024-12-10 06:18:25.922 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.01s
-2024-12-10 06:18:27.640 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
-2024-12-10 06:18:27.641 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
-2024-12-10 06:18:27.794 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
-2024-12-10 06:18:27.811 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.02s
-2024-12-10 06:18:31.502 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 06:18:31.503 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='string' to_account_id=0 amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 6, 18, 30, 476000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 18, 30, 476000, tzinfo=TzInfo(UTC))
-2024-12-10 06:18:31.504 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 06:18:31.509 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
-2024-12-10 06:18:31.510 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.01s
-2024-12-10 06:20:17.682 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 06:20:17.692 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 06:20:17.969 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 06:20:23.213 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
-2024-12-10 06:20:23.214 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
-2024-12-10 06:20:33.064 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
-2024-12-10 06:20:33.080 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.01s
-2024-12-10 06:20:36.705 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 06:20:36.710 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='string' to_account_id=0 amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 6, 20, 35, 229000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 20, 35, 229000, tzinfo=TzInfo(UTC))
-2024-12-10 06:20:36.710 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 06:20:36.730 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 06:20:36.745 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'replenishment', 'id': 6, 'from': 'string', 'to_account_id': 0, 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "653.00"}', 'status': 'pending', 'message': 'Replenishment is pending', 'start_date': '2024-12-10T06:20:36.714776', 'end_date': None}
-2024-12-10 06:20:36.747 | INFO     | app.main:create_replenishment:146 - replenishment created successfully: <app.models.Replenishment object at 0x7f36859c2f90>
-2024-12-10 06:20:36.748 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 200 in 0.04s
-2024-12-10 06:36:43.935 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
-2024-12-10 06:36:43.964 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 500 in 0.03s
-2024-12-10 06:58:22.287 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 06:58:22.292 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 06:58:22.530 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 06:58:35.112 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
-2024-12-10 06:58:35.137 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 200 in 0.02s
-2024-12-10 07:03:51.410 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 07:03:51.415 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 7, 3, 48, 980000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 7, 3, 48, 980000, tzinfo=TzInfo(UTC))
-2024-12-10 07:03:51.417 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 07:03:51.434 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 07:03:51.440 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 1, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "653.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T07:03:51.425566', 'end_date': None}
-2024-12-10 07:03:51.442 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f1803bc7b60>
-2024-12-10 07:03:51.444 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 07:03:57.288 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
-2024-12-10 07:03:57.296 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 200 in 0.01s
-2024-12-10 07:04:35.169 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 07:04:35.174 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 07:04:35.512 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 07:05:48.644 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
-2024-12-10 07:05:48.659 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 200 in 0.01s
-2024-12-10 07:31:49.834 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 07:31:49.871 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 07:31:50.252 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 08:00:33.888 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 08:00:33.924 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 08:00:34.159 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 08:08:59.418 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 08:08:59.435 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 08:08:59.925 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 08:20:10.981 | ERROR    | app.main:fetch_currency_rates:238 - Currency rate fetch error: HTTPSConnectionPool(host='www.bcc.kz', port=443): Max retries exceeded with url: /personal/get_app_courses/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f3bf4cade50>: Failed to resolve 'www.bcc.kz' ([Errno -2] Name or service not known)"))
-2024-12-10 10:05:36.137 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 10:05:36.187 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 10:05:37.021 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 10:14:58.634 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 10:14:58.708 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 10:14:59.220 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 10:27:41.194 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 10:27:41.204 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 10:27:41.379 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 10:30:37.478 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 10:30:37.488 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 10:30:37.855 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 10:30:40.486 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:30:40.488 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:30:55.481 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:30:55.489 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:31:10.483 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:31:10.489 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:31:25.482 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:31:25.488 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:31:36.937 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 10:31:36.948 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 10:31:37.422 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
-2024-12-10 10:31:40.488 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:31:40.490 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:31:55.484 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:31:55.495 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:32:10.498 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:32:10.502 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:32:25.498 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:32:25.506 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:32:40.498 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:32:40.502 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:32:55.505 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:32:55.510 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:33:10.518 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:33:10.554 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:33:25.500 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:33:25.506 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:33:52.782 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:33:52.799 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:33:31.886 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:33:31.896 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:33:46.859 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:33:46.865 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:34:01.935 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:34:01.942 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:34:16.936 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:34:16.943 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:34:25.643 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:34:25.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.09s
-2024-12-10 10:34:40.649 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:34:40.668 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:34:55.740 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:34:55.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:35:10.767 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:35:10.801 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:35:25.729 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:35:25.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:35:40.728 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:35:40.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:35:55.727 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:35:55.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:36:10.725 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:36:10.730 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:36:25.728 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:36:25.734 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:36:40.727 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:36:40.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:36:55.729 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:36:55.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:37:10.724 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:37:10.727 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:37:25.725 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:37:25.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.01s
-2024-12-10 10:38:44.605 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:38:44.622 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:37:46.967 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:37:46.973 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:38:01.965 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:38:01.971 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 10:38:13.861 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:38:13.907 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.03s
-2024-12-10 10:38:16.801 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 10:38:16.805 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:09:45.066 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:09:45.076 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:09:46.574 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:09:49.756 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:09:49.760 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:10:50.706 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:10:50.711 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:10:50.990 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:11:04.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:11:04.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:11:18.780 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
-2024-12-10 13:11:18.781 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
-2024-12-10 13:11:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:11:19.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:11:22.093 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
-2024-12-10 13:11:22.106 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.01s
-2024-12-10 13:11:28.439 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:11:28.443 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:11:28.445 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:11:28.467 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:11:28.474 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 3, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:11:28.449364', 'end_date': None}
-2024-12-10 13:11:28.475 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f2342096120>
-2024-12-10 13:11:28.477 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.04s
-2024-12-10 13:11:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:11:34.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:11:49.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:11:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:18:48.289 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:18:48.295 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:18:48.567 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:19:04.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:19:04.755 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:19:10.050 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:19:10.056 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:19:10.057 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:19:10.068 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:19:10.075 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 4, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:19:10.062262', 'end_date': None}
-2024-12-10 13:19:10.076 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f6856496900>
-2024-12-10 13:19:10.078 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 13:19:19.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:19:19.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:19:34.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:19:34.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:19:49.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:19:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:20:04.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:20:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:20:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:20:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:20:34.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:20:34.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:20:49.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:20:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:21:04.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:21:04.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:21:19.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:21:19.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:21:34.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:21:34.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:21:49.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:21:49.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:22:04.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:22:04.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:22:19.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:22:19.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:22:34.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:22:34.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:22:49.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:22:49.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:23:04.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:23:04.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:23:19.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:23:19.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:23:34.742 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:23:34.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:23:49.742 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:23:49.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:24:04.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:24:04.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:24:19.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:24:19.742 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:24:34.740 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:24:34.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:24:49.739 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:24:49.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:25:04.739 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:25:04.742 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:25:19.739 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:25:19.740 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:25:34.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:25:34.740 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:25:49.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:25:49.740 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:26:04.736 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:26:04.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:26:19.737 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:26:19.739 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:26:34.735 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:26:34.737 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:26:49.736 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:26:49.737 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:27:04.735 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:27:04.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:27:19.734 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:27:19.736 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:27:34.735 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:27:34.736 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:27:49.734 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:27:49.736 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:28:04.733 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:28:04.734 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:28:19.733 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:28:19.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:28:34.732 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:28:34.734 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:28:49.731 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:28:49.733 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:29:04.731 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:29:04.733 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:29:19.731 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:29:19.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:29:57.426 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:29:57.433 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:29:57.660 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:30:04.762 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:30:04.766 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:30:19.756 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:30:19.758 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:30:33.185 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:30:33.191 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:30:33.192 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:30:33.209 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:30:33.215 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 5, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:30:33.200190', 'end_date': None}
-2024-12-10 13:30:33.216 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f207779aa50>
-2024-12-10 13:30:33.218 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 13:30:34.755 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:30:34.757 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:30:49.756 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:30:49.760 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:31:04.754 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:31:04.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:31:19.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:31:19.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:31:34.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:31:34.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:31:49.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:31:49.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:33:09.211 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:33:09.218 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:33:10.400 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:33:19.757 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:33:19.760 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:33:20.425 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:33:20.430 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:33:20.432 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:33:20.448 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:33:20.454 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 6, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:33:20.439169', 'end_date': None}
-2024-12-10 13:33:20.456 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f6ac4d9aa50>
-2024-12-10 13:33:20.458 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 13:33:34.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:33:34.755 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:33:49.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:33:49.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:34:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:34:04.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:34:31.363 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:34:31.370 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:34:32.038 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:34:33.419 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:34:33.425 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:34:33.426 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:34:33.438 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:34:33.440 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 13:34:34.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:34:34.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:34:38.441 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 13:34:38.447 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 7, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:34:33.430237', 'end_date': None}
-2024-12-10 13:34:38.448 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f709b5e97f0>
-2024-12-10 13:34:38.450 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 5.03s
-2024-12-10 13:34:49.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:34:49.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:35:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:35:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:35:19.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:35:19.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:35:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:35:34.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:35:49.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:35:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:36:04.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:36:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:36:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:36:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:36:34.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:36:34.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:36:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:36:49.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:36:58.637 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:36:58.639 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:37:13.638 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:37:13.640 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:37:32.363 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:37:32.369 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:37:32.561 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:37:49.755 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:37:49.757 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:37:50.738 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:37:50.744 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:37:50.745 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:37:50.762 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:37:50.769 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 8, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:37:50.753050', 'end_date': None}
-2024-12-10 13:37:50.772 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f4fd2b9aa50>
-2024-12-10 13:37:50.775 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.04s
-2024-12-10 13:38:04.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:38:04.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:38:19.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:38:19.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:38:34.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:38:34.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:38:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:38:49.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:39:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:39:04.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:39:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:39:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:39:51.618 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:39:51.625 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:39:55.481 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:40:03.441 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:40:03.445 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:40:03.446 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:40:03.457 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:40:03.463 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 9, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:40:03.449921', 'end_date': None}
-2024-12-10 13:40:03.464 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f1929ae97f0>
-2024-12-10 13:40:03.466 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.02s
-2024-12-10 13:40:04.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:40:04.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:40:19.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:40:19.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:40:34.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:40:34.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:40:49.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:40:49.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:41:04.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:41:04.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:41:36.144 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:41:36.152 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:41:36.328 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:41:49.755 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:41:49.757 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:41:59.107 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:41:59.112 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:41:59.113 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:41:59.128 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:41:59.136 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 10, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:41:59.119265', 'end_date': None}
-2024-12-10 13:41:59.137 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f7c27ac2a50>
-2024-12-10 13:41:59.139 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 13:42:04.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:42:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:42:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:42:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:42:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:42:34.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:42:49.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:42:49.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:43:19.008 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:43:19.015 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:43:19.161 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:43:19.209 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:43:19.214 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:43:19.215 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:43:19.226 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:43:19.229 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 13:43:24.228 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 13:43:24.230 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 2 failed. Retrying...
-2024-12-10 13:43:29.230 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 3)
-2024-12-10 13:43:29.236 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 11, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:43:19.219617', 'end_date': None}
-2024-12-10 13:43:29.237 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f3015de97f0>
-2024-12-10 13:43:29.239 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 10.03s
-2024-12-10 13:43:34.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:43:34.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:43:49.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:43:49.755 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:43:53.303 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:43:53.305 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:43:53.306 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:43:53.314 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:43:53.321 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 12, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:43:53.308221', 'end_date': None}
-2024-12-10 13:43:53.322 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f3015d9bed0>
-2024-12-10 13:43:53.324 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.02s
-2024-12-10 13:44:04.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:44:04.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:44:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:44:19.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:44:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:44:34.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:44:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:44:49.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:45:04.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:45:04.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:45:19.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:45:19.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:45:34.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:45:34.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:45:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:45:49.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:46:04.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:46:04.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:46:19.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:46:19.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:46:34.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:46:34.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:46:49.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:46:49.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:47:04.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:47:04.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:47:19.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:47:19.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:47:41.098 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:47:41.104 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:47:43.307 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:47:49.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:47:49.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:48:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:48:04.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:48:15.358 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:48:15.365 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:48:15.365 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:48:15.378 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:48:15.386 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 13, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:48:15.370644', 'end_date': None}
-2024-12-10 13:48:15.387 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f15ccbcaa50>
-2024-12-10 13:48:15.389 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 13:48:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:48:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:48:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:48:34.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:48:49.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:48:49.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:49:13.991 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:49:13.997 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:49:14.161 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:49:18.063 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:49:18.069 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:49:18.070 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:49:18.082 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:49:18.084 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 13:49:19.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:49:19.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:49:23.083 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 13:49:23.089 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 14, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:49:18.074597', 'end_date': None}
-2024-12-10 13:49:23.090 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7fa23bcf17f0>
-2024-12-10 13:49:23.092 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 5.03s
-2024-12-10 13:49:34.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:49:34.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:49:49.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:49:49.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:50:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:50:04.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:50:19.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:50:19.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:50:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:50:34.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:50:49.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:50:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:51:04.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:51:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:51:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:51:19.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:51:34.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:51:34.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:51:49.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:51:49.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:52:04.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:52:04.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:52:19.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:52:19.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:52:34.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:52:34.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:52:49.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:52:49.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:53:04.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:53:04.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:53:44.712 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 13:53:44.719 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 13:53:44.905 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 13:53:49.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:53:49.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:54:04.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:54:04.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:54:07.025 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 13:54:07.029 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 13:54:07.030 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 13:54:07.042 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 13:54:07.048 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 15, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T13:54:07.034664', 'end_date': None}
-2024-12-10 13:54:07.049 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7ff3ea596ba0>
-2024-12-10 13:54:07.051 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 13:54:19.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:54:19.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:54:34.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:54:34.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:54:49.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:54:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:55:04.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:55:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:55:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:55:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:55:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:55:34.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:55:49.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:55:49.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:56:04.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:56:04.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:56:19.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:56:19.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:56:34.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:56:34.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:56:49.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:56:49.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:57:04.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:57:04.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:57:19.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:57:19.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:57:34.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:57:34.746 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:57:49.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:57:49.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:58:04.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:58:04.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:58:19.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:58:19.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:58:34.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:58:34.744 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:58:49.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:58:49.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:59:04.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:59:04.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:59:19.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:59:19.742 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:59:34.740 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:59:34.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 13:59:49.740 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 13:59:49.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:00:04.739 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:00:04.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:00:19.739 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:00:19.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:00:34.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:00:34.740 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:00:49.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:00:49.739 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:01:04.737 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:01:04.739 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:01:19.737 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:01:19.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:01:34.736 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:01:34.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:01:49.736 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:01:49.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:02:04.736 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:02:04.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:02:19.735 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:02:19.736 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:02:34.735 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:02:34.736 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:02:49.733 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:02:49.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:03:04.734 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:03:04.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:03:19.733 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:03:19.734 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:03:34.733 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:03:34.735 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:03:49.731 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:03:49.734 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:04:04.731 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:04:04.733 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:04:19.731 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:04:19.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:04:34.730 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:04:34.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:04:49.729 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:04:49.731 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:05:04.729 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:05:04.730 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:05:19.729 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:05:19.731 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:05:34.730 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:05:34.732 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:05:49.728 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:05:49.729 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:06:04.727 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:06:04.729 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:06:19.727 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:06:19.729 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:06:34.728 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:06:34.730 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:06:49.726 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:06:49.728 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:06:58.007 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 14:06:58.009 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 14:06:58.010 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 14:06:58.016 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:06:58.023 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 16, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T14:06:58.011344', 'end_date': None}
-2024-12-10 14:06:58.025 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7ff3e9c16350>
-2024-12-10 14:06:58.026 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.02s
-2024-12-10 14:07:04.725 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:07:04.727 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:07:19.727 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:07:19.730 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:07:34.724 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:07:34.726 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:07:49.724 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:07:49.726 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:08:04.724 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:08:04.725 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:08:19.722 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:08:19.724 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:08:34.722 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:08:34.724 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:08:49.722 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:08:49.723 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:09:04.723 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:09:04.726 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:09:19.721 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:09:19.722 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:09:34.721 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:09:34.723 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:09:49.720 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:09:49.722 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:10:04.720 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:10:04.721 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:10:19.719 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:10:19.720 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:10:34.718 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:10:34.720 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:10:49.719 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:10:49.721 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:11:04.718 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:11:04.720 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:11:40.923 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:11:40.929 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:11:41.174 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:11:49.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:11:49.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:12:00.879 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 14:12:00.885 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 14:12:00.886 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 14:12:00.903 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:12:00.911 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 17, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T14:12:00.894574', 'end_date': None}
-2024-12-10 14:12:00.913 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f027ad9aa50>
-2024-12-10 14:12:00.915 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 14:12:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:12:04.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:12:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:12:19.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:12:34.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:12:34.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:12:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:12:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:13:04.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:13:04.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:13:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:13:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:13:34.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:13:34.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:13:49.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:13:49.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:14:04.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:14:04.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:14:19.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:14:19.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:14:34.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:14:34.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:14:49.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:14:49.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:15:04.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:15:04.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:15:19.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:15:19.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:15:34.744 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:15:34.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:15:49.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:15:49.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:16:04.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:16:04.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:16:19.742 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:16:19.744 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:16:34.742 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:16:34.744 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:16:49.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:16:49.742 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:17:04.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:17:04.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:17:19.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:17:19.743 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:17:34.741 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:17:34.742 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:17:49.740 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:17:49.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:18:04.740 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:18:04.741 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:18:19.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:18:19.739 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:18:34.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:18:34.740 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:18:49.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:18:49.740 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:19:04.738 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:19:04.740 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:19:19.736 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:19:19.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:19:34.736 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:19:34.738 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:20:05.525 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:20:05.530 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:20:05.774 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:20:19.555 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 14:20:19.561 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 14:20:19.561 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 14:20:19.573 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:20:19.578 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 18, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T14:20:19.565930', 'end_date': None}
-2024-12-10 14:20:19.579 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7fea2da1d7f0>
-2024-12-10 14:20:19.581 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 14:20:19.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:20:19.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:20:34.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:20:34.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:20:49.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:20:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:21:04.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:21:04.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:21:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:21:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:21:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:21:34.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:21:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:21:49.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:22:04.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:22:04.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:22:19.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:22:19.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:22:34.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:22:34.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:22:49.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:22:49.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:23:04.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:23:04.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:23:19.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:23:19.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:23:34.745 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:23:34.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:23:49.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:23:49.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:24:04.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:24:04.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:24:19.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:24:19.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:24:34.743 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:24:34.745 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:24:49.742 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:24:49.744 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:25:04.742 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:25:04.744 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:25:23.281 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:25:23.288 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:25:23.491 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:25:34.757 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:25:34.759 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:25:36.670 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 14:25:36.675 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 14:25:36.676 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 14:25:36.688 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:25:36.694 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 19, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T14:25:36.680368', 'end_date': None}
-2024-12-10 14:25:36.696 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f7cd4096a50>
-2024-12-10 14:25:36.697 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 14:25:49.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:25:49.755 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:26:04.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:26:04.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:26:19.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:26:19.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:27:00.217 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:27:00.224 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:27:00.477 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:27:04.754 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:27:04.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:27:10.283 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 14:27:10.288 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 14:27:10.289 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 14:27:10.302 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:27:10.309 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 20, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T14:27:10.293240', 'end_date': None}
-2024-12-10 14:27:10.310 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f61bde96a50>
-2024-12-10 14:27:10.312 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 14:27:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:27:19.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:27:34.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:27:34.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:27:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:27:49.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:28:04.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:28:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:28:36.937 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:28:36.943 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:28:37.841 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:28:48.650 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
-2024-12-10 14:28:48.656 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=1 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 13, 11, 26, 116000, tzinfo=TzInfo(UTC))
-2024-12-10 14:28:48.656 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
-2024-12-10 14:28:48.667 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:28:48.675 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 21, 'from_account_id': 1, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T14:28:48.660383', 'end_date': None}
-2024-12-10 14:28:48.679 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7fcc86fed7f0>
-2024-12-10 14:28:48.681 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
-2024-12-10 14:28:49.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:28:49.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:29:04.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:29:04.755 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:29:19.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:29:19.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:29:34.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:29:34.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:29:49.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:29:49.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:44:42.506 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:44:42.512 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:44:42.513 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:44:42.518 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 14:44:42.672 | INFO     | app.main:fetch_currency_rates:281 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:44:47.518 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 14:44:47.521 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 2 failed. Retrying...
-2024-12-10 14:44:49.758 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:44:49.761 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:44:52.521 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 3)
-2024-12-10 14:45:04.755 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:45:04.757 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:45:19.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:45:19.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:45:34.754 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:45:34.756 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:45:49.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:45:49.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:46:28.336 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:46:28.342 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:46:28.343 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:46:28.347 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 14:46:28.523 | INFO     | app.main:fetch_currency_rates:281 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:46:33.348 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 14:46:33.350 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 2 failed. Retrying...
-2024-12-10 14:46:34.755 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:46:34.757 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:46:38.351 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 3)
-2024-12-10 14:46:49.753 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:46:49.755 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:47:03.962 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 14:47:03.967 | INFO     | app.main:create_replenishment:133 - Creating replenishment: from_='string' to_account_id=1 amount=100.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC))
-2024-12-10 14:47:03.968 | INFO     | app.main:get_currency_rates:304 - Returning cached currency rates
-2024-12-10 14:47:03.991 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:47:03.996 | INFO     | app.main:send_transaction_to_queue:98 - Transaction sent to queue: {'name': 'replenishment', 'id': 7, 'from': 'string', 'to_account_id': 1, 'amount': 100.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Replenishment is pending', 'start_date': '2024-12-10T14:47:03.974080', 'end_date': None}
-2024-12-10 14:47:03.997 | INFO     | app.main:create_replenishment:145 - replenishment created successfully: <app.models.Replenishment object at 0x7f6a3a1caf90>
-2024-12-10 14:47:03.999 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 200 in 0.04s
-2024-12-10 14:47:04.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:47:04.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:47:19.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:47:19.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:47:34.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:47:34.754 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:47:49.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:47:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:48:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:48:04.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:48:19.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:48:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:48:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:48:34.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:48:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:48:49.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:49:10.374 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:49:10.379 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:49:10.380 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:49:10.385 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 14:49:10.651 | INFO     | app.main:fetch_currency_rates:281 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:49:15.385 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 14:49:15.388 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 2 failed. Retrying...
-2024-12-10 14:49:19.752 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:49:19.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:49:20.388 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 3)
-2024-12-10 14:49:27.368 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 14:49:27.372 | INFO     | app.main:create_replenishment:133 - Creating replenishment: from_='string' to_account_id=1 amount=100.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC))
-2024-12-10 14:49:27.373 | INFO     | app.main:get_currency_rates:304 - Returning cached currency rates
-2024-12-10 14:49:27.384 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:49:27.390 | INFO     | app.main:send_transaction_to_queue:98 - Transaction sent to queue: {'name': 'replenishment', 'id': 8, 'from': 'string', 'to_account_id': 1, 'amount': 100.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Replenishment is pending', 'start_date': '2024-12-10T14:49:27.376981', 'end_date': None}
-2024-12-10 14:49:27.391 | INFO     | app.main:create_replenishment:145 - replenishment created successfully: <app.models.Replenishment object at 0x7fa8f179b0e0>
-2024-12-10 14:49:27.393 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 200 in 0.02s
-2024-12-10 14:49:34.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:49:34.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:49:49.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:49:49.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:50:04.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:50:04.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:50:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:50:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:50:34.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:50:34.749 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:50:49.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:50:49.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:51:04.747 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:51:04.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:51:19.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:51:19.747 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:51:34.746 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:51:34.748 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:51:54.080 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:51:54.086 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:51:54.087 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:51:54.091 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 14:51:54.897 | INFO     | app.main:fetch_currency_rates:281 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:51:59.093 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 14:51:59.096 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 2 failed. Retrying...
-2024-12-10 14:52:04.097 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 3)
-2024-12-10 14:52:04.757 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:52:04.760 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:52:09.960 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 14:52:09.965 | INFO     | app.main:create_replenishment:133 - Creating replenishment: from_='string' to_account_id=1 amount=100.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC))
-2024-12-10 14:52:09.966 | INFO     | app.main:get_currency_rates:304 - Returning cached currency rates
-2024-12-10 14:52:09.980 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:52:09.986 | INFO     | app.main:send_transaction_to_queue:98 - Transaction sent to queue: {'name': 'replenishment', 'id': 9, 'from': 'string', 'to_account_id': 1, 'amount': 100.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Replenishment is pending', 'start_date': '2024-12-10T14:52:09.971042', 'end_date': None}
-2024-12-10 14:52:09.987 | INFO     | app.main:create_replenishment:145 - replenishment created successfully: <app.models.Replenishment object at 0x7f54c4fd0c20>
-2024-12-10 14:52:09.990 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 200 in 0.03s
-2024-12-10 14:52:19.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:52:19.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:52:34.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:52:34.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:52:49.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:52:49.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:53:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:53:04.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:53:19.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:53:19.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:53:34.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:53:34.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:53:49.749 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:53:49.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:54:04.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:54:04.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:54:19.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:54:19.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:54:34.610 | INFO     | app.main:<module>:32 - Application initialized
-2024-12-10 14:54:34.617 | INFO     | app.main:startup_event:219 - Starting up application
-2024-12-10 14:54:34.619 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:54:34.623 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 1 failed. Retrying...
-2024-12-10 14:54:34.882 | INFO     | app.main:fetch_currency_rates:282 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
-2024-12-10 14:54:39.624 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 2)
-2024-12-10 14:54:39.627 | WARNING  | app.main:get_connection:60 - RabbitMQ connection attempt 2 failed. Retrying...
-2024-12-10 14:54:44.628 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 3)
-2024-12-10 14:54:49.754 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:54:49.757 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:54:49.931 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
-2024-12-10 14:54:49.935 | INFO     | app.main:create_replenishment:133 - Creating replenishment: from_='string' to_account_id=1 amount=100.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 14, 46, 57, 62000, tzinfo=TzInfo(UTC))
-2024-12-10 14:54:49.936 | INFO     | app.main:get_currency_rates:305 - Returning cached currency rates
-2024-12-10 14:54:49.950 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
-2024-12-10 14:54:49.955 | INFO     | app.main:send_transaction_to_queue:98 - Transaction sent to queue: {'name': 'replenishment', 'id': 10, 'from': 'string', 'to_account_id': 1, 'amount': 100.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "656.00"}', 'status': 'pending', 'message': 'Replenishment is pending', 'start_date': '2024-12-10T14:54:49.941240', 'end_date': None}
-2024-12-10 14:54:49.957 | INFO     | app.main:create_replenishment:145 - replenishment created successfully: <app.models.Replenishment object at 0x7f6773af8c20>
-2024-12-10 14:54:49.958 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 200 in 0.03s
-2024-12-10 14:55:04.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:55:04.752 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:55:19.750 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:55:19.751 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:55:34.751 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:55:34.753 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
-2024-12-10 14:55:49.748 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://transaction-service:80/metrics
-2024-12-10 14:55:49.750 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://transaction-service:80/metrics with status 200 in 0.00s
+2024-12-09 12:16:40.403 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 12:16:40.406 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 12:16:41.592 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 14:20:33.258 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 14:20:33.260 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 14:20:33.478 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 17:33:45.762 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 17:33:45.764 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 17:33:45.848 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 17:35:15.778 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 17:35:15.780 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 17:35:15.849 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 17:44:19.213 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 17:44:19.216 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 17:44:19.285 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 17:50:16.892 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 17:50:16.894 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 17:50:17.087 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 18:07:59.059 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 18:07:59.063 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 18:07:59.127 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 18:37:02.091 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 18:37:02.093 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 18:37:02.178 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 18:39:38.360 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 18:39:38.363 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 18:39:38.923 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 18:56:09.853 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 18:56:09.856 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 18:56:09.982 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:00:05.976 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:00:05.979 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:00:06.038 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:02:18.612 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:02:18.614 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:02:18.678 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:02:48.540 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:02:48.542 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:02:48.932 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:06:52.995 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:06:52.997 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:06:53.179 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:07:17.554 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:07:17.557 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:07:17.755 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:18:29.824 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:18:29.827 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:18:29.915 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:20:08.220 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:20:08.222 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:20:08.284 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:23:05.251 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:23:05.253 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:23:05.326 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:26:54.901 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:26:54.904 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:26:56.345 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:31:02.901 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:31:02.903 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:31:03.287 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:36:51.280 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:36:51.284 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:36:51.345 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:41:35.531 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:41:35.533 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:41:35.622 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:47:14.505 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:47:14.508 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:47:14.576 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 19:53:51.866 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 19:53:51.869 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 19:53:52.104 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:06:23.190 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:06:23.194 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:06:23.255 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:11:09.151 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:11:09.153 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:11:09.215 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:12:09.573 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:12:09.575 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:12:09.645 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:13:59.456 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:13:59.458 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:13:59.556 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:16:17.644 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:16:17.646 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:16:17.708 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:20:20.426 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:20:20.428 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:20:20.501 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:21:27.869 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:21:27.872 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:21:28.081 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:29:38.573 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:29:38.576 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:29:38.655 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:32:04.170 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:32:04.173 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:32:04.596 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:36:27.155 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:36:27.158 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:36:27.236 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:37:50.866 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:37:50.868 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:37:50.980 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:50:21.351 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:50:21.353 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:50:21.479 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:53:29.010 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:53:29.013 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:53:29.081 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:55:58.698 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:55:58.700 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:55:59.390 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 20:57:20.478 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 20:57:20.480 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 20:57:20.541 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:01:32.319 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:01:32.321 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:01:32.386 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:05:00.672 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:05:00.674 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:05:00.745 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:14:39.971 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:14:39.973 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:14:40.033 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:18:44.584 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:18:44.590 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:18:44.658 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:20:42.559 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:20:42.561 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:20:42.638 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:26:07.459 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:26:07.462 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:26:07.520 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:28:07.640 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:28:07.642 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:28:07.819 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:29:12.599 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:29:12.601 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:29:12.664 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:29:33.544 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:29:33.548 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:29:33.608 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-09 21:32:13.878 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-09 21:32:13.880 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-09 21:32:14.343 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '512.00', 'eur': '540.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 05:58:41.142 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 07:25:18.872 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:25:18.878 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 07:25:19.127 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 07:27:51.234 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:27:51.238 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 07:27:51.497 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 07:30:02.070 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:30:02.074 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 07:30:02.266 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 07:33:08.549 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:33:08.552 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 07:33:08.755 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 07:56:18.445 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:56:18.448 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 07:56:18.655 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 07:58:07.601 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:58:07.604 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 07:58:07.837 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:24:20.263 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:24:20.267 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:24:20.452 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:25:39.801 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:25:39.804 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:25:40.025 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:28:21.764 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:28:21.769 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:28:22.040 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:30:08.464 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:30:08.468 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:30:08.679 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:31:25.209 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:31:25.212 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:31:25.534 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:38:37.628 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:38:37.630 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:38:37.753 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:45:02.239 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:45:02.241 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:45:02.475 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:50:55.970 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:50:55.974 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:50:56.304 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 08:55:25.304 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 08:55:25.308 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 08:55:25.736 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 11:03:01.288 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 11:10:31.964 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 11:10:31.967 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 11:10:32.832 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 13:38:59.270 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 13:38:59.275 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 13:39:00.072 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 13:46:27.796 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 13:46:27.799 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 13:46:28.085 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 13:48:48.756 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 13:48:48.759 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 13:48:48.967 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 13:51:50.804 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 13:51:50.813 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 13:51:51.138 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:09:09.056 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:09:09.059 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:09:09.290 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:13:38.334 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:13:38.336 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:13:41.073 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:16:59.534 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:16:59.536 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:16:59.786 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:21:18.552 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:21:18.554 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:21:19.994 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:35:04.187 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:35:04.191 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:35:05.217 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:37:31.806 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:37:31.808 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:37:31.965 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:43:10.208 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:43:10.211 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:43:11.515 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:49:15.320 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:49:15.323 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:49:16.807 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:51:23.432 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:51:23.434 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:51:24.100 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 14:54:16.020 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 14:54:16.023 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 14:54:16.853 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}
+2024-12-10 15:06:16.753 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 15:06:16.756 | INFO     | app.main:startup_event:170 - Starting up application
+2024-12-10 15:06:16.950 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '656.00'}

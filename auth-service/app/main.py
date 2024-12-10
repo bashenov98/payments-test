@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from . import models, schemas, auth, database
+from . import models, schemas, auth, database, admin
 from .database import engine
 from .auth import get_current_user
 from .config import settings
@@ -12,6 +12,8 @@ from starlette.responses import Response
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 REQUEST_COUNT = Counter('request_count', 'Number of requests', ['method', 'endpoint'])
 REQUEST_LATENCY = Histogram('request_latency_seconds', 'Request latency', ['endpoint'])
@@ -32,31 +34,32 @@ def metrics():
 
 @app.post("/register", response_model=schemas.UserOut)
 def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    db_user = db.query(models.User).filter(
-        (models.User.username == user.username) | (models.User.email == user.email)
-    ).first()
-    if db_user:
-        raise HTTPException(status_code=400, detail="Username or email already registered")
-    hashed_password = auth.get_password_hash(user.password)
-    new_user = models.User(
+    # Создаем пользователя в базе авторизации
+    db_user = models.User(
         username=user.username,
         email=user.email,
-        hashed_password=hashed_password
+        hashed_password=auth.get_password_hash(user.password),
+        role_id=user.role_id
     )
-    db.add(new_user)
+    db.add(db_user)
     db.commit()
-    db.refresh(new_user)
-    return new_user
+    db.refresh(db_user)
+    return db_user
+
 
 @app.post("/login", response_model=schemas.Token)
 def login(form_data: schemas.UserCreate, db: Session = Depends(get_db)):
     user = auth.authenticate_user(db, form_data.username, form_data.password)
     if not user:
         raise HTTPException(status_code=401, detail="Incorrect username or password")
+    
+    user_role_id = user.role_id  
     access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = auth.create_access_token(
-        data={"sub": user.username}, expires_delta=access_token_expires
+        data={"sub": user.username, "role_id": user_role_id, "user_id": user.id}, 
+        expires_delta=access_token_expires
     )
+    
     return {"access_token": access_token, "token_type": "bearer"}
 
 @app.get("/users/me", response_model=schemas.UserOut)
