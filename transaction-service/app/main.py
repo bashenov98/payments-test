@@ -82,7 +82,6 @@ def send_notification_to_queue(to_email, message):
     except Exception as e:
         log.error(f"Error sending notification to RabbitMQ: {e}")
 
-
     
 
 def send_transaction_to_queue(transaction):
@@ -109,11 +108,13 @@ def create_transaction_message(from_account_id, to_account_id, amount):
 def create_transaction(request: schemas.TransactionRequest, db: Session = Depends(get_db)):
     try:
         log.info(f"Creating transaction: {request}")
-        transaction = crud.transfer_funds(
+        transaction = crud.create_pending_transaction(
             db, 
             from_account_id=request.from_account_id, 
             to_account_id=request.to_account_id, 
-            amount=request.amount
+            amount=request.amount,
+            currency=request.currency,
+            rate=json.dumps(get_currency_rates())
         )
         message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
         send_notification_to_queue(to_email="azamat.han2007@gmail.com", message=message_text)
@@ -126,6 +127,54 @@ def create_transaction(request: schemas.TransactionRequest, db: Session = Depend
     except Exception as e:
         log.error(f"Unexpected error during transaction creation: {e}")
         raise HTTPException(status_code=500, detail="An error occurred during the transaction: " + str(e))
+
+@app.post("/replenishment", response_model=schemas.ReplenishmentResponse)
+def create_replenishment(request: schemas.ReplenishmentRequest, db: Session = Depends(get_db)):
+    try:
+        log.info(f"Creating replenishment: {request}")
+        replenishment = crud.create_pending_replenishment(
+            db, 
+            from_=request.from_, 
+            to_account_id=request.to_account_id, 
+            amount=request.amount,
+            currency=request.currency,
+            rate=json.dumps(get_currency_rates())
+        )
+        #message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
+        #send_notification_to_queue(to_email="azamat.han2007@gmail.com", message="message_text")
+        send_transaction_to_queue(replenishment.to_dict())
+        log.info(f"replenishment created successfully: {replenishment}")
+        return replenishment
+    except ValueError as e:
+        log.error(f"replenishment failed with ValueError: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        log.error(f"Unexpected error during replenishment creation: {e}")
+        raise HTTPException(status_code=500, detail="An error occurred during the replenishment: " + str(e))
+
+@app.post("/withdrawal", response_model=schemas.WithdrawalResponse)
+def create_withdrawal(request: schemas.WithdrawalRequest, db: Session = Depends(get_db)):
+    try:
+        log.info(f"Creating withdrawal: {request}")
+        withdrawal = crud.create_pending_withdrawal(
+            db, 
+            from_account_id=request.from_account_id, 
+            to_=request.to_, 
+            amount=request.amount,
+            currency=request.currency,
+            rate=json.dumps(get_currency_rates())
+        )
+        #message_text = create_transaction_message(from_account_id=request.from_account_id, to_account_id=request.to_account_id, amount=request.amount)
+        #send_notification_to_queue(to_email="azamat.han2007@gmail.com", message="message_text")
+        send_transaction_to_queue(withdrawal.to_dict())
+        log.info(f"withdrawal created successfully: {withdrawal}")
+        return withdrawal
+    except ValueError as e:
+        log.error(f"withdrawal failed with ValueError: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        log.error(f"Unexpected error during withdrawal creation: {e}")
+        raise HTTPException(status_code=500, detail="An error occurred during the withdrawal: " + str(e))
 
 # Get all transactions
 @app.get("/transactions", response_model=list[schemas.TransactionResponse])

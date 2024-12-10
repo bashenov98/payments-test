@@ -56,3 +56,98 @@
 2024-12-08 21:05:54.725 | INFO     | app.main:<module>:32 - Application initialized
 2024-12-08 21:05:54.833 | INFO     | app.main:startup_event:170 - Starting up application
 2024-12-08 21:05:58.789 | INFO     | app.main:fetch_currency_rates:185 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '654.00'}
+2024-12-10 06:04:54.176 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 06:04:54.182 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 06:04:54.771 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 06:05:31.398 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
+2024-12-10 06:05:31.400 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
+2024-12-10 06:05:31.526 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
+2024-12-10 06:05:31.543 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.02s
+2024-12-10 06:06:24.590 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
+2024-12-10 06:06:24.596 | INFO     | app.main:create_replenishment:134 - Creating replenishment: id=0 from_='bank' to_account_id=1 amount=100.0 currency='string' rate='string' status='string' message='string' start_date=datetime.datetime(2024, 12, 10, 6, 5, 39, 465000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 5, 39, 465000, tzinfo=TzInfo(UTC))
+2024-12-10 06:06:24.597 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: 'ReplenishmentResponse' object has no attribute 'from_account_id'
+2024-12-10 06:06:24.599 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.01s
+2024-12-10 06:11:11.930 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 06:11:11.936 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 06:11:12.206 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 06:11:18.668 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
+2024-12-10 06:11:18.669 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
+2024-12-10 06:11:23.580 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
+2024-12-10 06:11:23.592 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.01s
+2024-12-10 06:12:53.217 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 06:12:53.222 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 06:12:53.894 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 06:12:56.474 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
+2024-12-10 06:12:56.475 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
+2024-12-10 06:12:56.857 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
+2024-12-10 06:12:56.870 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.01s
+2024-12-10 06:14:20.161 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
+2024-12-10 06:14:20.167 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
+2024-12-10 06:14:20.169 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
+2024-12-10 06:14:20.182 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: 'ReplenishmentRequest' object has no attribute 'from_account_id'
+2024-12-10 06:14:20.183 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.02s
+2024-12-10 06:16:19.468 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 06:16:19.476 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 06:16:19.704 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 06:16:36.386 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
+2024-12-10 06:16:36.391 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
+2024-12-10 06:16:36.392 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
+2024-12-10 06:16:36.413 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
+2024-12-10 06:16:36.414 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.03s
+2024-12-10 06:18:20.495 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 06:18:20.502 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 06:18:20.837 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 06:18:22.137 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
+2024-12-10 06:18:22.143 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
+2024-12-10 06:18:22.144 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
+2024-12-10 06:18:22.156 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
+2024-12-10 06:18:22.157 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.02s
+2024-12-10 06:18:25.912 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
+2024-12-10 06:18:25.914 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='bank' to_account_id=1 amount=1000.0 currency='USD' rate='string' status='pending' message='new' start_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 13, 19, 813000, tzinfo=TzInfo(UTC))
+2024-12-10 06:18:25.915 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
+2024-12-10 06:18:25.921 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
+2024-12-10 06:18:25.922 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.01s
+2024-12-10 06:18:27.640 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
+2024-12-10 06:18:27.641 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
+2024-12-10 06:18:27.794 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
+2024-12-10 06:18:27.811 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.02s
+2024-12-10 06:18:31.502 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
+2024-12-10 06:18:31.503 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='string' to_account_id=0 amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 6, 18, 30, 476000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 18, 30, 476000, tzinfo=TzInfo(UTC))
+2024-12-10 06:18:31.504 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
+2024-12-10 06:18:31.509 | ERROR    | app.main:create_replenishment:152 - Unexpected error during replenishment creation: name 'message_text' is not defined
+2024-12-10 06:18:31.510 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 500 in 0.01s
+2024-12-10 06:20:17.682 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 06:20:17.692 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 06:20:17.969 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 06:20:23.213 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/docs
+2024-12-10 06:20:23.214 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/docs with status 200 in 0.00s
+2024-12-10 06:20:33.064 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/openapi.json
+2024-12-10 06:20:33.080 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/openapi.json with status 200 in 0.01s
+2024-12-10 06:20:36.705 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/replenishment
+2024-12-10 06:20:36.710 | INFO     | app.main:create_replenishment:134 - Creating replenishment: from_='string' to_account_id=0 amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 6, 20, 35, 229000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 6, 20, 35, 229000, tzinfo=TzInfo(UTC))
+2024-12-10 06:20:36.710 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
+2024-12-10 06:20:36.730 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
+2024-12-10 06:20:36.745 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'replenishment', 'id': 6, 'from': 'string', 'to_account_id': 0, 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "653.00"}', 'status': 'pending', 'message': 'Replenishment is pending', 'start_date': '2024-12-10T06:20:36.714776', 'end_date': None}
+2024-12-10 06:20:36.747 | INFO     | app.main:create_replenishment:146 - replenishment created successfully: <app.models.Replenishment object at 0x7f36859c2f90>
+2024-12-10 06:20:36.748 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/replenishment with status 200 in 0.04s
+2024-12-10 06:36:43.935 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
+2024-12-10 06:36:43.964 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 500 in 0.03s
+2024-12-10 06:58:22.287 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 06:58:22.292 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 06:58:22.530 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 06:58:35.112 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
+2024-12-10 06:58:35.137 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 200 in 0.02s
+2024-12-10 07:03:51.410 | INFO     | app.middleware:dispatch:9 - Incoming request: POST http://localhost:8002/withdrawal
+2024-12-10 07:03:51.415 | INFO     | app.main:create_withdrawal:158 - Creating withdrawal: from_account_id=0 to_='string' amount=1.0 currency='string' rate='string' status='pending' message='string' start_date=datetime.datetime(2024, 12, 10, 7, 3, 48, 980000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2024, 12, 10, 7, 3, 48, 980000, tzinfo=TzInfo(UTC))
+2024-12-10 07:03:51.417 | INFO     | app.main:get_currency_rates:257 - Returning cached currency rates
+2024-12-10 07:03:51.434 | INFO     | app.main:get_connection:57 - Attempting to connect to RabbitMQ (attempt 1)
+2024-12-10 07:03:51.440 | INFO     | app.main:send_transaction_to_queue:99 - Transaction sent to queue: {'name': 'withdrawal', 'id': 1, 'from_account_id': 0, 'to': 'string', 'amount': 1.0, 'currency': 'string', 'rate': '{"usd": "513.00", "eur": "543.00", "rub": "5.35", "gbp": "653.00"}', 'status': 'pending', 'message': 'Withdrawal is pending', 'start_date': '2024-12-10T07:03:51.425566', 'end_date': None}
+2024-12-10 07:03:51.442 | INFO     | app.main:create_withdrawal:170 - withdrawal created successfully: <app.models.Withdrawal object at 0x7f1803bc7b60>
+2024-12-10 07:03:51.444 | INFO     | app.middleware:dispatch:17 - Completed request: POST http://localhost:8002/withdrawal with status 200 in 0.03s
+2024-12-10 07:03:57.288 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
+2024-12-10 07:03:57.296 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 200 in 0.01s
+2024-12-10 07:04:35.169 | INFO     | app.main:<module>:32 - Application initialized
+2024-12-10 07:04:35.174 | INFO     | app.main:startup_event:219 - Starting up application
+2024-12-10 07:04:35.512 | INFO     | app.main:fetch_currency_rates:234 - Currency rates updated: {'usd': '513.00', 'eur': '543.00', 'rub': '5.35', 'gbp': '653.00'}
+2024-12-10 07:05:48.644 | INFO     | app.middleware:dispatch:9 - Incoming request: GET http://localhost:8002/saldodraft/0
+2024-12-10 07:05:48.659 | INFO     | app.middleware:dispatch:17 - Completed request: GET http://localhost:8002/saldodraft/0 with status 200 in 0.01s
