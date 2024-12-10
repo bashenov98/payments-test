@@ -8,3 +8,4 @@ pydantic_settings
 alembic
 starlette
 prometheus-client
+pika

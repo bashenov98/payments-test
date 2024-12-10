@@ -1,7 +1,9 @@
 # app/crud.py
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import NoResultFound
 from . import models, schemas
 from decimal import Decimal
+import json
 
 def create_account(db: Session, account: schemas.AccountCreate, user_id: int):
     db_account = models.Account(
@@ -46,3 +48,118 @@ def delete_account(db: Session, account_id: int):
 
 def get_user_by_username(db: Session, username: str):
     return db.query(models.User).filter(models.User.username == username).first()
+
+def process_transaction(db: Session, body):
+    """
+    Process a transaction and validate its ID.
+    """
+    try:
+        data = json.loads(body.decode())
+        from_account_id = data.get("from_account_id")
+        to_account_id = data.get("to_account_id")
+        if not from_account_id:
+            raise ValueError("from_account_id ID is required")
+
+        if not to_account_id:
+            raise ValueError("to_account_id ID is required")
+        
+        amount = data.get("amount")
+        if amount is None:
+            raise ValueError("Amount is required")
+        
+        # Fetch the transaction by ID
+        from_account_id_ = db.query(models.Account).filter(models.Account.id == from_account_id).first()
+        if not from_account_id_:
+            raise NoResultFound(f"from_account_id with ID {from_account_id} not found")
+        
+        # Fetch the transaction by ID
+        to_account_id_ = db.query(models.Account).filter(models.Account.id == to_account_id).first()
+        if not to_account_id_:
+            raise NoResultFound(f"to_account_id with ID {to_account_id} not found")
+        
+        # Perform your transaction processing logic
+        print("Processing transaction:", data)
+        summ = from_account_id_.balance-float(data.get("amount"))
+        if summ < 0:
+            raise ValueError("Unsufficient amount")
+        
+        from_account_id_.balance=summ
+        from_account_id_.draft=float(amount)
+
+        to_account_id_.balance +=float(amount)
+        
+        db.commit()
+
+    except Exception as e:
+        print("Error:", e)
+        db.rollback()
+        raise e
+
+def process_replenishment(db: Session, body):
+    """
+    Process a transaction and validate its ID.
+    """
+    try:
+        data = json.loads(body.decode())
+        print("data:", data)
+        to_account_id = data.get("to_account_id")
+
+        if not to_account_id:
+            raise ValueError("to_account_id ID is required")
+        
+        amount = data.get("amount")
+        if amount is None:
+            raise ValueError("Amount is required")
+        
+        # Fetch the transaction by ID
+        to_account_id_ = db.query(models.Account).filter(models.Account.id == to_account_id).first()
+        if not to_account_id_:
+            raise NoResultFound(f"to_account_id with ID {to_account_id} not found")
+        
+        # Perform your transaction processing logic
+        print("Processing transaction:", data)
+
+        to_account_id_.balance +=float(amount)
+        
+        db.commit()
+
+    except Exception as e:
+        print("Error:", e)
+        db.rollback()
+        raise e
+    
+    
+def process_withdrawal(db: Session, body):
+    """
+    Process a transaction and validate its ID.
+    """
+    try:
+        data = json.loads(body.decode())
+        print("data:", data)
+        from_account_id = data.get("from_account_id")
+        print("from_account_id:", from_account_id)
+
+        if not from_account_id:
+            raise ValueError("from_account_id ID is required")
+        
+        amount = data.get("amount")
+        if amount is None:
+            raise ValueError("Amount is required")
+        
+        # Fetch the transaction by ID
+        from_account_id_ = db.query(models.Account).filter(models.Account.id == from_account_id).first()
+        if not from_account_id_:
+            raise NoResultFound(f"from_account_id with ID {from_account_id} not found")
+        
+        # Perform your transaction processing logic
+        print("Processing transaction:", data)
+
+        from_account_id_.balance-=float(amount)
+        from_account_id_.draft=float(amount)
+        
+        db.commit()
+
+    except Exception as e:
+        print("Error:", e)
+        db.rollback()
+        raise e

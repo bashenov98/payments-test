@@ -24,7 +24,8 @@ class Account(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer,  ForeignKey('users.id'), index=True, nullable=False)
     currency = Column(String, nullable=False)
-    balance = Column(Numeric(precision=12, scale=2), default=Decimal('0.00'))
+    balance = Column(Numeric(precision=12, scale=2), default=float('0.00'))
+    draft = Column(Numeric(precision=12, scale=2), default=float('0.00'))
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 

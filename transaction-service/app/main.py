@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
 from app import models, schemas, crud
-from app.database import engine, get_db
+from app.database import engine, get_db, SessionLocal
 from .dependencies import  get_current_account
 import pika
 import json
@@ -83,7 +83,6 @@ def send_notification_to_queue(to_email, message):
         log.error(f"Error sending notification to RabbitMQ: {e}")
 
     
-
 def send_transaction_to_queue(transaction):
     try:
         connection = get_connection()
@@ -214,11 +213,60 @@ def extract_sell_rates(json_string):
         print("Ошибка: Невалидный JSON.")
         return None
 
+
 @app.on_event("startup")
 async def startup_event():
     log.info("Starting up application")
-    thread = threading.Thread(target=schedule_rates_fetch, daemon=True)
-    thread.start()
+    
+    # Thread 1: Schedule rates fetch
+    thread1 = threading.Thread(target=schedule_rates_fetch, daemon=True)
+    thread1.start()
+    
+    # Thread 2: Run the RabbitMQ consumer
+    thread2 = threading.Thread(target=run_consumer, daemon=True)
+    thread2.start()
+
+def run_consumer():
+    # Example of RabbitMQ consumer logic
+    with SessionLocal() as db:
+        consume_transaction(lambda ch, method, properties, body: process_transaction_update_rabbit(body,db))
+
+def consume_transaction(callback):
+    """Consume messages from RabbitMQ"""
+    connection = get_connection()
+    channel = connection.channel()
+    channel.queue_declare(queue="transactonUPD", durable=True)
+
+    channel.basic_consume(
+        queue="transactonUPD",
+        on_message_callback=callback,
+        auto_ack=True
+    )
+    print("Waiting for transaction...")
+    channel.start_consuming()
+
+def process_transaction_update_rabbit(body, db: Session):
+    try:
+        # Decode the JSON object
+        transaction = json.loads(body.decode())
+        # Get the name field
+        name = transaction.get("name")
+        id = transaction.get("id")
+        status = transaction.get("status")
+        message = transaction.get("message")
+        if name == "transactions":
+            crud.update_transaction_status(db,id,status,message)
+        elif name == "replenishment":
+            crud.update_replenishment_status(db,id,status,message)
+        elif name == "withdrawal":
+            crud.update_withdrawal_status(db,id,status,message)
+        else:
+            print("Unknown name:", name)
+
+    except json.JSONDecodeError as e:
+        print(f"Failed to decode JSON: {e}")
+    except Exception as e:
+        print(f"Error processing transaction: {e}")
 
 def fetch_currency_rates():
     url = "https://www.bcc.kz/personal/get_app_courses/"
@@ -267,4 +315,6 @@ def read_transactions_by_account(account_id: int, db: Session = Depends(get_db))
     except Exception as e:
         print(f"An error occurred: {e}")
         raise HTTPException(status_code=500, detail="An error occurred while fetching transactions:  {e}")
+    
+
     
